@@ -1,0 +1,16 @@
+{
+  "enabledPlugins": {
+    "typescript-lsp@claude-plugins-official": true
+  },
+    "permissions": {
+    "allow": [
+      "mcp__ide__getDiagnostics",
+      "Bash(ls -la /Users/weiying/Code/Javascript/dfom-fe/src/app/components/ | grep -E \"\\\\.tsx$\")",
+      "Bash(npm install:*)",
+      "Bash(npm run:*)",
+      "Bash(npx tsc:*)",
+      "WebFetch(domain:support.claude.com)",
+      "WebFetch(domain:claude.ai)"
+    ]
+  }
+}
