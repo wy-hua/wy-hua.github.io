@@ -21,6 +21,10 @@ export default function App() {
   )
 
   useEffect(() => {
+    document.documentElement.setAttribute('data-theme', dark ? 'dark' : 'light')
+  }, [dark])
+
+  useEffect(() => {
     const mq = window.matchMedia('(prefers-color-scheme: dark)')
     const handler = (e: MediaQueryListEvent) => setDark(e.matches)
     mq.addEventListener('change', handler)
@@ -30,7 +34,7 @@ export default function App() {
   const navigate = (p: Page) => { setPage(p); window.scrollTo(0, 0) }
 
   return (
-    <div data-theme={dark ? 'dark' : 'light'}>
+    <div>
       <Nav page={page} setPage={navigate} lang={lang} setLang={setLang} dark={dark} setDark={setDark} />
       {page === 'home'       && <HomePage       lang={lang} nav={navigate} />}
       {page === 'worship'    && <WorshipPage    lang={lang} />}
@@ -39,7 +43,7 @@ export default function App() {
       {page === 'sermons'    && <SermonsPage    lang={lang} />}
       {page === 'contact'    && <ContactPage    lang={lang} />}
       {page === 'library'    && <LibraryPage    lang={lang} />}
-      <Footer lang={lang} nav={navigate} />
+      <Footer lang={lang} />
     </div>
   )
 }

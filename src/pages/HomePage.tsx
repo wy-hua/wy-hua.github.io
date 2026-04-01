@@ -10,9 +10,14 @@ export default function HomePage({ lang, nav }: Props) {
   return (
     <div className="page">
       <div className="hero">
-        <div className="hero-name-zh">{t.churchName}</div>
-        <div className="hero-name-en">{t.churchSub}</div>
-        <div className="hero-tagline">{t.tagline}</div>
+        <div className="hero-vert" aria-hidden="true">{t.churchName}</div>
+        <div className="hero-content">
+          <div className="hero-eyebrow">Chinese Bible Church · Greater Buffalo</div>
+          <div className="hero-name-zh">{t.churchName}</div>
+          <div className="hero-name-en">{t.churchSub}</div>
+          <div className="hero-divider"></div>
+          <div className="hero-tagline">{t.tagline}</div>
+        </div>
       </div>
       <div className="container">
         <div className="section">
@@ -34,7 +39,7 @@ export default function HomePage({ lang, nav }: Props) {
               <div className="home-card-title">{h.sundayH}</div>
               <div className="home-card-item"><strong>{h.sunday}</strong></div>
               <div className="home-card-item"><small>{h.sundayLoc}</small></div>
-              <div style={{ marginTop: 12 }}>
+              <div style={{ marginTop: 16 }}>
                 <button className="sermon-listen" onClick={() => nav('worship')} style={{ cursor: 'pointer' }}>
                   {t.ui.learnMore}
                 </button>

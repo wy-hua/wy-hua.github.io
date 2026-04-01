@@ -1,44 +1,45 @@
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
 :root {
-  --font-serif: 'Noto Serif SC', 'Noto Serif TC', Georgia, serif;
-  --font-display: 'EB Garamond', 'Noto Serif SC', Georgia, serif;
+  --font-serif: 'Noto Serif SC', 'Noto Serif TC', 'Noto Serif', Georgia, serif;
+  --font-display: 'Cormorant Garamond', 'EB Garamond', Georgia, serif;
 
-  --bg: #F5F0E6;
+  --bg: #F7F3EC;
   --surface: #FFFFFF;
-  --surface-alt: #EDE7DA;
-  --nav-bg: rgba(255,255,255,0.95);
-  --primary: #1A3457;
-  --primary-hover: #254A7A;
-  --accent: #8A6B20;
-  --accent-light: #B8922C;
-  --text: #1C1814;
-  --text-secondary: #4A4540;
-  --text-muted: #7A7068;
-  --border: #D5CDBC;
-  --link: #1A3457;
-  --link-hover: #8A6B20;
-  --card-shadow: 0 2px 12px rgba(26,52,87,0.08);
-  --verse-bg: #EDE7DA;
+  --surface-alt: #EEE8DC;
+  --nav-bg: rgba(247,243,236,0.97);
+  --primary: #142030;
+  --primary-hover: #1D3148;
+  --accent: #9B7218;
+  --accent-light: #BC8E22;
+  --text: #18140F;
+  --text-secondary: #44403A;
+  --text-muted: #857C73;
+  --border: #DDD5C6;
+  --link: #142030;
+  --link-hover: #9B7218;
+  --card-shadow: 0 1px 4px rgba(20,32,48,0.06), 0 6px 24px rgba(20,32,48,0.06);
+  --verse-bg: #EEE8DC;
+  --nav-height: 68px;
 }
 
 [data-theme="dark"] {
-  --bg: #111827;
-  --surface: #1C2A3E;
-  --surface-alt: #243347;
-  --nav-bg: rgba(28,42,62,0.97);
-  --primary: #7EB5DC;
-  --primary-hover: #92C4E8;
-  --accent: #C8A03A;
-  --accent-light: #E0BB55;
-  --text: #E4DDD0;
-  --text-secondary: #B4ACA0;
-  --text-muted: #7A7268;
-  --border: #2E3D54;
-  --link: #7EB5DC;
-  --link-hover: #C8A03A;
-  --card-shadow: 0 2px 12px rgba(0,0,0,0.35);
-  --verse-bg: #1C2A3E;
+  --bg: #0A1120;
+  --surface: #101C2E;
+  --surface-alt: #162236;
+  --nav-bg: rgba(10,17,32,0.97);
+  --primary: #84BCDA;
+  --primary-hover: #9CCDE8;
+  --accent: #C4901C;
+  --accent-light: #DEAA30;
+  --text: #EDE7DC;
+  --text-secondary: #ACA49B;
+  --text-muted: #6C6760;
+  --border: #1C2C40;
+  --link: #84BCDA;
+  --link-hover: #C4901C;
+  --card-shadow: 0 2px 16px rgba(0,0,0,0.45);
+  --verse-bg: #101C2E;
 }
 
 html { font-size: 16px; scroll-behavior: smooth; }
@@ -47,12 +48,13 @@ body {
   font-family: var(--font-serif);
   background: var(--bg);
   color: var(--text);
-  line-height: 1.8;
-  transition: background 0.2s, color 0.2s;
+  line-height: 1.85;
+  transition: background 0.25s, color 0.25s;
   -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
-a { color: var(--link); text-underline-offset: 2px; transition: color 0.15s; }
+a { color: var(--link); text-underline-offset: 3px; transition: color 0.15s; }
 a:hover { color: var(--link-hover); }
 button { cursor: pointer; font-family: inherit; border: none; background: none; }
 img { max-width: 100%; display: block; }
