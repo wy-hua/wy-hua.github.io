@@ -1,6 +1,5 @@
 import type { Lang, Page } from '../types'
 import { T } from '../i18n/translations'
-import ContactBlock from '../components/ContactBlock'
 
 interface Props { lang: Lang; nav: (p: Page) => void }
 
@@ -35,7 +34,6 @@ export default function HomePage({ lang, nav }: Props) {
           <span className="section-title">{h.scheduleH}</span>
           <div className="home-grid">
             <div className="home-card">
-              <div className="home-card-icon">⛪</div>
               <div className="home-card-title">{h.sundayH}</div>
               <div className="home-card-item"><strong>{h.sunday}</strong></div>
               <div className="home-card-item"><small>{h.sundayLoc}</small></div>
@@ -46,13 +44,11 @@ export default function HomePage({ lang, nav }: Props) {
               </div>
             </div>
             <div className="home-card">
-              <div className="home-card-icon">📖</div>
               <div className="home-card-title">{h.fridayH}</div>
               <div className="home-card-item"><strong>{h.friday}</strong></div>
               <div className="home-card-item"><small>{h.fridayInfo}</small></div>
             </div>
             <div className="home-card">
-              <div className="home-card-icon">🙏</div>
               <div className="home-card-title">{h.satH}</div>
               <div className="home-card-item"><strong>{h.saturday}</strong></div>
               <div className="home-card-item"><small>{h.satInfo}</small></div>
@@ -60,10 +56,6 @@ export default function HomePage({ lang, nav }: Props) {
           </div>
         </div>
 
-        <div className="section">
-          <span className="section-title">{h.contactH}</span>
-          <ContactBlock lang={lang} />
-        </div>
       </div>
     </div>
   )

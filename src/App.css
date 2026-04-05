@@ -175,7 +175,7 @@
   align-items: center;
 }
 
-@media (max-width: 960px) {
+@media (max-width: 1080px) {
   .nav-links { display: none; }
   .nav-hamburger { display: flex; }
   .nav-controls { display: none; }
@@ -494,12 +494,6 @@
   transform: translateY(-4px);
 }
 
-.home-card-icon {
-  font-size: 20px;
-  margin-bottom: 20px;
-  opacity: 0.8;
-}
-
 .home-card-title {
   font-family: var(--font-serif);
   font-size: 16px;
@@ -581,6 +575,33 @@
 [data-theme="dark"] .contact-line-label {
   background: var(--surface-alt);
   color: var(--accent);
+}
+
+/* ═══════════════════════════════════════════════════
+   WeChat QR Code
+═══════════════════════════════════════════════════ */
+.wechat-qr-wrap {
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 14px;
+  padding: 28px;
+  border: 1px solid var(--border);
+  background: var(--surface);
+  box-shadow: var(--card-shadow);
+}
+.wechat-qr-img {
+  width: 200px;
+  height: 200px;
+  display: block;
+  image-rendering: pixelated;
+}
+.wechat-qr-label {
+  font-size: 12px;
+  font-weight: 700;
+  color: var(--text-secondary);
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
 }
 
 /* ═══════════════════════════════════════════════════
@@ -781,6 +802,33 @@
   color: var(--text-secondary);
   margin-top: 16px;
   font-style: italic;
+}
+
+.sermon-archive-links {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  border: 1px solid var(--border);
+  overflow: hidden;
+}
+.sermon-archive-link {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 14px 20px;
+  font-size: 14px;
+  color: var(--link);
+  background: var(--surface);
+  border-bottom: 1px solid var(--border);
+  text-decoration: none;
+  transition: background 0.15s, color 0.15s;
+}
+.sermon-archive-link:last-child { border-bottom: none; }
+.sermon-archive-link:hover { background: var(--surface-alt); color: var(--link-hover); }
+.sermon-archive-arrow {
+  color: var(--accent);
+  font-size: 13px;
+  flex-shrink: 0;
 }
 
 /* ═══════════════════════════════════════════════════

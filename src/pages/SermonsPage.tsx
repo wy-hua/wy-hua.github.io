@@ -42,19 +42,13 @@ export default function SermonsPage({ lang }: { lang: Lang }) {
         </div>
         <div className="section">
           <span className="section-title">{t.archiveH}</span>
-          <div className="info-card">
-            <div className="info-row">
-              <span className="info-label"></span>
-              <span className="info-value">
-                <a href="http://www.ehwcc.org/home_files/Sermons-2012-05.htm" target="_blank" rel="noopener noreferrer">{t.archive2012}</a>
-              </span>
-            </div>
-            <div className="info-row">
-              <span className="info-label"></span>
-              <span className="info-value">
-                <a href="http://www.ehwcc.org/home_files/Sermons-2011-07.html" target="_blank" rel="noopener noreferrer">{t.archive2011}</a>
-              </span>
-            </div>
+          <div className="sermon-archive-links">
+            <a href="http://www.ehwcc.org/home_files/Sermons-2012-05.htm" target="_blank" rel="noopener noreferrer" className="sermon-archive-link">
+              <span className="sermon-archive-arrow">→</span>{t.archive2012}
+            </a>
+            <a href="http://www.ehwcc.org/home_files/Sermons-2011-07.html" target="_blank" rel="noopener noreferrer" className="sermon-archive-link">
+              <span className="sermon-archive-arrow">→</span>{t.archive2011}
+            </a>
           </div>
         </div>
       </div>

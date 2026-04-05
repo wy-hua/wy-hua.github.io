@@ -15,9 +15,9 @@ export const T: Record<Lang, {
   }
   worship: { h: string; sub: string; p1: string; p2: string; timeH: string; time: string; loc: string; addr: string }
   fellowship: { h: string; sub: string; goalH: string; goal: string; purposeH: string; purpose: string; open: string; verse: string; verseRef: string }
-  weekly: { h: string; sub: string; fridayH: string; fridayTime: string; fridayZoom: string; fridayDesc: string; satH: string; satTime: string; satZoom: string; sunH: string; sunTime: string; contact: string; friDay: string; satDay: string; sunDay: string }
+  weekly: { h: string; sub: string; fridayH: string; fridayTime: string; fridayZoom: string; fridayDesc: string; satH: string; satTime: string; satZoom: string; sunH: string; sunTime: string; sunLoc: string; contact: string; friDay: string; satDay: string; sunDay: string }
   sermons: { h: string; sub: string; intro: string; tableH: string; date: string; title: string; speaker: string; listen: string; more: string; archiveH: string; archive2012: string; archive2011: string }
-  contact: { h: string; sub: string; dirH: string; step1: string; step2: string; step3: string; rideH: string; ride: string; contactH: string; attn: string; addr: string; fb: string; email: string; maps: string }
+  contact: { h: string; sub: string; dirH: string; step1: string; step2: string; step3: string; rideH: string; ride: string; contactH: string; attn: string; addr: string; fb: string; email: string; maps: string; wechatH: string; wechatDesc: string; wechatScan: string }
   library: { h: string; sub: string; missionH: string; missionNote: string; rulesH: string; rules: string[]; catalogH: string; no: string; title: string }
   footer: { attn: string; addr: string; email: string; fb: string; english: string; copy: string }
   ui: { addr: string; social: string; time: string; location: string; church: string; learnMore: string }
@@ -77,6 +77,7 @@ export const T: Record<Lang, {
       satZoom: 'Zoom ID: 89299583165　密碼: 333',
       sunH: '週日　主日崇拜',
       sunTime: '每週日　09:30 AM',
+      sunLoc: 'Greenfield Theatre, Eastern Hills Wesleyan Church',
       contact: '如需更多資訊，歡迎聯絡教會：',
       friDay: '週五', satDay: '週六', sunDay: '週日',
     },
@@ -104,6 +105,9 @@ export const T: Record<Lang, {
       fb: 'Facebook 粉絲專頁',
       email: 'cbcgb2022@gmail.com',
       maps: '在 Google Maps 中查看',
+      wechatH: '加入微信群',
+      wechatDesc: '掃描下方二維碼，加入教會微信群，與弟兄姊妹保持聯繫、分享資訊。',
+      wechatScan: '掃描加入',
     },
     library: {
       h: '公佈欄/圖書館', sub: 'Bulletin / Library',
@@ -187,6 +191,7 @@ export const T: Record<Lang, {
       satZoom: 'Zoom ID: 89299583165　密码: 333',
       sunH: '周日　主日崇拜',
       sunTime: '每周日　09:30 AM',
+      sunLoc: 'Greenfield Theatre, Eastern Hills Wesleyan Church',
       contact: '如需更多资讯，欢迎联络教会：',
       friDay: '周五', satDay: '周六', sunDay: '周日',
     },
@@ -214,6 +219,9 @@ export const T: Record<Lang, {
       fb: 'Facebook 粉丝专页',
       email: 'cbcgb2022@gmail.com',
       maps: '在 Google Maps 中查看',
+      wechatH: '加入微信群',
+      wechatDesc: '扫描下方二维码，加入教会微信群，与弟兄姊妹保持联系、分享资讯。',
+      wechatScan: '扫描加入',
     },
     library: {
       h: '公布栏/图书馆', sub: 'Bulletin / Library',
@@ -246,7 +254,7 @@ export const T: Record<Lang, {
     churchName: 'Chinese Bible Church of Greater Buffalo',
     churchSub: '布法羅華人聖經教會',
     tagline: 'Serving the Chinese community in the Buffalo & Niagara regions of Western New York',
-    nav: ['Home', 'Sunday Worship', 'Fellowships', 'Weekly Meetings', 'Sermons', 'How to Find Us', 'Bulletin', 'English Church ↗'],
+    nav: ['Home', 'Worship', 'Fellowship', 'Weekly', 'Sermons', 'Directions', 'Bulletin', 'EHWC ↗'],
     home: {
       welcomeH: 'Welcome to Chinese Bible Church of Greater Buffalo!',
       p1: 'Our mission is to help all people be reconciled with God, come to know Jesus Christ, and build a living relationship with Him.',
@@ -297,6 +305,7 @@ export const T: Record<Lang, {
       satZoom: 'Zoom ID: 89299583165  Password: 333',
       sunH: 'Sunday Worship',
       sunTime: 'Every Sunday  9:30 AM',
+      sunLoc: 'Greenfield Theatre, Eastern Hills Wesleyan Church',
       contact: 'For more information, please contact us:',
       friDay: 'FRI', satDay: 'SAT', sunDay: 'SUN',
     },
@@ -324,6 +333,9 @@ export const T: Record<Lang, {
       fb: 'Follow us on Facebook',
       email: 'cbcgb2022@gmail.com',
       maps: 'View on Google Maps',
+      wechatH: 'Join Our WeChat Group',
+      wechatDesc: 'Scan the QR code below to join our church WeChat group and stay connected with the congregation.',
+      wechatScan: 'Scan to Join',
     },
     library: {
       h: 'Bulletin / Library', sub: '公佈欄/圖書館',

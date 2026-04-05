@@ -30,7 +30,7 @@ export default function WorshipPage({ lang }: { lang: Lang }) {
             </div>
             <div className="info-row">
               <span className="info-label">Email</span>
-              <span className="info-value"><a href="mailto:cbcgb2022@gmail.com">cbcgb2022@gmail.com</a></span>
+              <span className="info-value"><a href={`mailto:${full.footer.email}`}>{full.footer.email}</a></span>
             </div>
           </div>
         </div>

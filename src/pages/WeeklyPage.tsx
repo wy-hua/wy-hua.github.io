@@ -30,6 +30,7 @@ export default function WeeklyPage({ lang }: { lang: Lang }) {
           <div className="meeting-body">
             <div className="meeting-title">{t.sunH}</div>
             <div className="meeting-time">{t.sunTime}</div>
+            <div className="meeting-zoom">{t.sunLoc}</div>
           </div>
         </div>
         <p className="body-text" style={{ marginTop: 24 }}>

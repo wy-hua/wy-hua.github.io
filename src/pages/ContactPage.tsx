@@ -32,7 +32,7 @@ export default function ContactPage({ lang }: { lang: Lang }) {
         </div>
         <div className="section">
           <span className="section-title">{t.rideH}</span>
-          <p className="body-text">{t.ride}</p>
+          <p className="body-text">{t.ride} <a href={`mailto:${t.email}`}>{t.email}</a></p>
         </div>
         <div className="section">
           <span className="section-title">{t.contactH}</span>
@@ -53,6 +53,18 @@ export default function ContactPage({ lang }: { lang: Lang }) {
               <span className="contact-line-label">{full.ui.social}</span>
               <a href="https://www.facebook.com/ehwcc" target="_blank" rel="noopener noreferrer">{t.fb}</a>
             </div>
+          </div>
+        </div>
+        <div className="section">
+          <span className="section-title">{t.wechatH}</span>
+          <p className="body-text">{t.wechatDesc}</p>
+          <div className="wechat-qr-wrap">
+            <img
+              src="/wechat-qr.png"
+              alt={t.wechatScan}
+              className="wechat-qr-img"
+            />
+            <span className="wechat-qr-label">{t.wechatScan}</span>
           </div>
         </div>
       </div>
