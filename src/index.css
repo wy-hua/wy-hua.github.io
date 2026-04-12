@@ -21,6 +21,10 @@
   --card-shadow: 0 1px 4px rgba(20,32,48,0.06), 0 6px 24px rgba(20,32,48,0.06);
   --verse-bg: #EEE8DC;
   --nav-height: 68px;
+  --hero-bg-a: #e4ddd2;
+  --hero-bg-b: #ede7dc;
+  --hero-bg-c: #f2ede6;
+  --footer-bg: #e8e2d8;
 }
 
 [data-theme="dark"] {
@@ -40,6 +44,10 @@
   --link-hover: #C4901C;
   --card-shadow: 0 2px 16px rgba(0,0,0,0.45);
   --verse-bg: #101C2E;
+  --hero-bg-a: #060D1A;
+  --hero-bg-b: #0C1828;
+  --hero-bg-c: #142238;
+  --footer-bg: #070E1C;
 }
 
 html { font-size: 16px; scroll-behavior: smooth; }

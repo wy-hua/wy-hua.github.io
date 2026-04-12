@@ -194,7 +194,7 @@
    Hero (Home Page)
 ═══════════════════════════════════════════════════ */
 .hero {
-  background: linear-gradient(150deg, #060D1A 0%, #0C1828 50%, #142238 100%);
+  background: linear-gradient(150deg, var(--hero-bg-a) 0%, var(--hero-bg-b) 50%, var(--hero-bg-c) 100%);
   min-height: 580px;
   display: flex;
   flex-direction: column;
@@ -322,7 +322,7 @@
    Inner Page Headers
 ═══════════════════════════════════════════════════ */
 .page-header {
-  background: linear-gradient(150deg, #060D1A 0%, #0C1828 60%, #142238 100%);
+  background: linear-gradient(150deg, var(--hero-bg-a) 0%, var(--hero-bg-b) 60%, var(--hero-bg-c) 100%);
   padding: 56px 36px 50px;
   text-align: center;
   position: relative;
@@ -1018,7 +1018,7 @@
    Footer
 ═══════════════════════════════════════════════════ */
 .footer {
-  background: #070E1C;
+  background: var(--footer-bg);
   padding: 48px 36px 28px;
   margin-top: auto;
   border-top: 1px solid rgba(155, 114, 24, 0.2);
@@ -1125,3 +1125,25 @@
   .footer-contact-row { flex-direction: column; gap: 2px; }
   .footer-contact-value { text-align: left; }
 }
+
+/* ═══════════════════════════════════════════════════
+   Light-mode overrides for dark-background sections
+═══════════════════════════════════════════════════ */
+[data-theme="light"] .hero-eyebrow { color: rgba(20,32,48,0.5); }
+[data-theme="light"] .hero-name-zh { color: var(--text); text-shadow: none; }
+[data-theme="light"] .hero-name-en { color: var(--text-secondary); }
+[data-theme="light"] .hero-tagline  { color: var(--text-muted); }
+[data-theme="light"] .hero-vert     { color: rgba(20,32,48,0.06); }
+[data-theme="light"] .hero::before  { color: rgba(20,32,48,0.04); }
+
+[data-theme="light"] .page-header-zh { color: var(--text); }
+[data-theme="light"] .page-header-en { color: var(--text-secondary); }
+[data-theme="light"] .page-header::before { color: rgba(20,32,48,0.04); }
+
+[data-theme="light"] .footer-inner        { border-bottom-color: rgba(20,32,48,0.08); }
+[data-theme="light"] .footer-name         { color: var(--text); }
+[data-theme="light"] .footer-tagline      { color: var(--text-muted); }
+[data-theme="light"] .footer-contact-value { color: var(--text-secondary); }
+[data-theme="light"] .footer-social-link  { color: var(--text-muted); }
+[data-theme="light"] .footer-social-link:hover { color: var(--text); }
+[data-theme="light"] .footer-copy         { color: var(--text-muted); }
