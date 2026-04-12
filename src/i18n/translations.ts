@@ -16,7 +16,7 @@ export const T: Record<Lang, {
   worship: { h: string; sub: string; p1: string; p2: string; timeH: string; time: string; loc: string; addr: string }
   fellowship: { h: string; sub: string; goalH: string; goal: string; purposeH: string; purpose: string; open: string; verse: string; verseRef: string }
   weekly: { h: string; sub: string; fridayH: string; fridayTime: string; fridayZoom: string; fridayDesc: string; satH: string; satTime: string; satZoom: string; sunH: string; sunTime: string; sunLoc: string; contact: string; friDay: string; satDay: string; sunDay: string }
-  sermons: { h: string; sub: string; intro: string; tableH: string; date: string; title: string; speaker: string; listen: string; more: string; archiveH: string; archive2012: string; archive2011: string }
+  sermons: { h: string; sub: string; intro: string; tableH: string; date: string; title: string; speaker: string; listen: string; more: string; archiveH: string; archive2012: string; archive2011: string; prev: string; next: string; pageOf: (cur: number, total: number) => string }
   contact: { h: string; sub: string; dirH: string; step1: string; step2: string; step3: string; rideH: string; ride: string; contactH: string; attn: string; addr: string; fb: string; email: string; maps: string; wechatH: string; wechatDesc: string; wechatScan: string }
   library: { h: string; sub: string; missionH: string; missionNote: string; rulesH: string; rules: string[]; catalogH: string; no: string; title: string }
   footer: { attn: string; addr: string; email: string; fb: string; english: string; copy: string }
@@ -90,6 +90,9 @@ export const T: Record<Lang, {
       archiveH: '早期錄音',
       archive2012: '2012年5月之前的錄音',
       archive2011: '2011年7月之前的錄音',
+      prev: '← 上一頁',
+      next: '下一頁 →',
+      pageOf: (cur: number, total: number) => `第 ${cur} 頁，共 ${total} 頁`,
     },
     contact: {
       h: '如何前往', sub: 'How to Find Us',
@@ -204,6 +207,9 @@ export const T: Record<Lang, {
       archiveH: '早期录音',
       archive2012: '2012年5月之前的录音',
       archive2011: '2011年7月之前的录音',
+      prev: '← 上一页',
+      next: '下一页 →',
+      pageOf: (cur: number, total: number) => `第 ${cur} 页，共 ${total} 页`,
     },
     contact: {
       h: '如何前往', sub: 'How to Find Us',
@@ -318,6 +324,9 @@ export const T: Record<Lang, {
       archiveH: 'Earlier Recordings',
       archive2012: 'Recordings before May 2012',
       archive2011: 'Recordings before July 2011',
+      prev: '← Previous',
+      next: 'Next →',
+      pageOf: (cur: number, total: number) => `Page ${cur} of ${total}`,
     },
     contact: {
       h: 'How to Find Us', sub: '如何前往',

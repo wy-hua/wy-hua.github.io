@@ -25,7 +25,7 @@ This is a static React + TypeScript + Vite SPA for a Chinese-speaking church (Ea
 
 **Types:** Shared types (`Page`, `Lang`, `Sermon`) are defined in `src/types.ts`.
 
-**Component props** all use inline interfaces; components receive `lang`, `setPage`, and `t` (translations object) as props from `App.tsx`.
+**Component props** all use inline interfaces. Components receive `lang` (and sometimes `setPage`/`nav`) from `App.tsx`. Translations are NOT passed as props — each component imports `T` from `src/i18n/translations.ts` and derives `const t = T[lang]` locally. The `nav` array in `T[lang].nav` is indexed in the same order as the `pages` array in `Nav.tsx`.
 
 # Gstack
 

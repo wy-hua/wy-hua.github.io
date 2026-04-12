@@ -1,10 +1,23 @@
+import { useState } from 'react'
 import type { Lang } from '../types'
 import { T } from '../i18n/translations'
 import { SERMONS } from '../data/sermons'
 import PageHeader from '../components/PageHeader'
 
+const PAGE_SIZE = 20
+
 export default function SermonsPage({ lang }: { lang: Lang }) {
   const t = T[lang].sermons
+  const [page, setPage] = useState(1)
+  const totalPages = Math.ceil(SERMONS.length / PAGE_SIZE)
+  const start = (page - 1) * PAGE_SIZE
+  const visible = SERMONS.slice(start, start + PAGE_SIZE)
+
+  function goTo(p: number) {
+    setPage(p)
+    window.scrollTo(0, 0)
+  }
+
   return (
     <div className="page">
       <PageHeader zh="證道信息" en="Sermons" lang={lang} />
@@ -23,7 +36,7 @@ export default function SermonsPage({ lang }: { lang: Lang }) {
                 </tr>
               </thead>
               <tbody>
-                {SERMONS.map(s => (
+                {visible.map(s => (
                   <tr key={s.date}>
                     <td className="sermon-date">{s.date}</td>
                     <td>{s.title}</td>
@@ -37,6 +50,23 @@ export default function SermonsPage({ lang }: { lang: Lang }) {
                 ))}
               </tbody>
             </table>
+          </div>
+          <div className="sermons-pagination">
+            <button
+              className="sermon-page-btn"
+              onClick={() => goTo(page - 1)}
+              disabled={page === 1}
+            >
+              {t.prev}
+            </button>
+            <span className="sermon-page-info">{t.pageOf(page, totalPages)}</span>
+            <button
+              className="sermon-page-btn"
+              onClick={() => goTo(page + 1)}
+              disabled={page === totalPages}
+            >
+              {t.next}
+            </button>
           </div>
           <p className="sermons-note">{t.more}</p>
         </div>

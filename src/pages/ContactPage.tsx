@@ -1,6 +1,7 @@
 import type { Lang } from '../types'
 import { T } from '../i18n/translations'
 import PageHeader from '../components/PageHeader'
+import wechatQr from '../assets/wechat_groupchat_code.jpg'
 
 export default function ContactPage({ lang }: { lang: Lang }) {
   const full = T[lang]
@@ -60,7 +61,7 @@ export default function ContactPage({ lang }: { lang: Lang }) {
           <p className="body-text">{t.wechatDesc}</p>
           <div className="wechat-qr-wrap">
             <img
-              src="/wechat-qr.png"
+              src={wechatQr}
               alt={t.wechatScan}
               className="wechat-qr-img"
             />
