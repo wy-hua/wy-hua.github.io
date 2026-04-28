@@ -208,7 +208,7 @@
 
 /* large ghost cross watermark — centered, very subtle */
 .hero::before {
-  content: '✝';
+  content: '\271D\FE0E';
   position: absolute;
   left: 50%;
   top: 50%;
@@ -260,7 +260,7 @@
   font-family: var(--font-display);
   font-size: 11px;
   font-style: normal;
-  color: rgba(255,255,255,0.38);
+  color: rgba(255,255,255,0.72);
   letter-spacing: 0.22em;
   text-transform: uppercase;
   margin-bottom: 28px;
@@ -283,7 +283,7 @@
   font-size: 24px;
   font-style: italic;
   font-weight: 400;
-  color: rgba(255,255,255,0.62);
+  color: rgba(255,255,255,0.84);
   letter-spacing: 0.02em;
   margin-bottom: 32px;
   animation: hero-rise 1s 0.1s cubic-bezier(0.22,1,0.36,1) both;
@@ -297,8 +297,8 @@
 }
 .hero-tagline {
   font-family: var(--font-serif);
-  font-size: 13px;
-  color: rgba(255,255,255,0.38);
+  font-size: 16px;
+  color: rgba(255,255,255,0.74);
   letter-spacing: 0.04em;
   max-width: 420px;
   line-height: 2;
@@ -329,7 +329,7 @@
   overflow: hidden;
 }
 .page-header::before {
-  content: '✝';
+  content: '\271D\FE0E';
   position: absolute;
   right: 5%;
   top: 50%;
@@ -360,7 +360,7 @@
   font-size: 18px;
   font-style: italic;
   font-weight: 400;
-  color: rgba(255,255,255,0.52);
+  color: rgba(255,255,255,0.82);
   margin-top: 8px;
   position: relative;
 }
@@ -1085,7 +1085,7 @@
 }
 .footer-tagline {
   font-size: 12.5px;
-  color: rgba(255,255,255,0.28);
+  color: rgba(255,255,255,0.68);
   line-height: 1.8;
   max-width: 380px;
 }
@@ -1113,7 +1113,7 @@
   flex-shrink: 0;
 }
 .footer-contact-value {
-  color: rgba(255,255,255,0.36);
+  color: rgba(255,255,255,0.78);
   line-height: 1.5;
   text-align: right;
 }
@@ -1133,7 +1133,7 @@
   align-items: center;
   gap: 6px;
   font-size: 12.5px;
-  color: rgba(255,255,255,0.36);
+  color: rgba(255,255,255,0.72);
   text-decoration: none;
   transition: color 0.15s;
 }
@@ -1143,7 +1143,7 @@
   max-width: 1100px;
   margin: 24px auto 0;
   font-size: 11.5px;
-  color: rgba(255,255,255,0.15);
+  color: rgba(255,255,255,0.56);
   text-align: center;
   letter-spacing: 0.03em;
 }
@@ -1163,7 +1163,7 @@
 /* ═══════════════════════════════════════════════════
    Light-mode overrides for dark-background sections
 ═══════════════════════════════════════════════════ */
-[data-theme="light"] .hero-eyebrow { color: rgba(20,32,48,0.5); }
+[data-theme="light"] .hero-eyebrow { color: rgba(20,32,48,0.72); }
 [data-theme="light"] .hero-name-zh { color: var(--text); text-shadow: none; }
 [data-theme="light"] .hero-name-en { color: var(--text-secondary); }
 [data-theme="light"] .hero-tagline  { color: var(--text-muted); }
