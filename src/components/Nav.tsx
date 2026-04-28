@@ -39,7 +39,7 @@ export default function Nav({ page, setPage, lang, setLang, dark, setDark }: Pro
     <nav className="nav">
       <div className="nav-inner">
         <button className="nav-logo" onClick={() => goTo('home')} style={{ background: 'none', border: 'none', cursor: 'pointer' }}>
-          <span className="nav-cross">✝</span>
+          <span className="nav-cross">✝︎</span>
           <span className="nav-name">{t.churchName}</span>
         </button>
         <div className="nav-links">

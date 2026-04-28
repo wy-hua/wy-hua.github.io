@@ -12,7 +12,7 @@ export default function Footer({ lang }: Props) {
       <div className="footer-inner">
         <div className="footer-identity">
           <div className="footer-name">
-            <span className="footer-name-cross">✝</span>
+            <span className="footer-name-cross">✝︎</span>
             {t.attn}
           </div>
           <div className="footer-tagline">{tagline}</div>

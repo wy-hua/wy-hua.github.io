@@ -16,7 +16,7 @@ export default function FellowshipPage({ lang }: { lang: Lang }) {
           <span className="section-title">{t.purposeH}</span>
           <p className="body-text">{t.purpose}</p>
         </div>
-        <div className="open-notice">✝ {t.open}</div>
+        <div className="open-notice">✝︎ {t.open}</div>
         <div className="verse-block" style={{ marginTop: 24 }}>
           <p>{t.verse}</p>
           <cite>{t.verseRef}</cite>
